@@ -1,0 +1,383 @@
+/* Общие стили */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+a { text-decoration: none; color: #fff;}
+
+nav {
+    background-color: transparent;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff;
+}
+
+nav a:hover {
+    background-color: rgba(0, 160, 233, 0.2);
+    box-shadow: 0 0 10px rgba(0, 160, 233, 0.7);
+}
+
+.phone {
+    font-size: 15px;
+}
+
+/* Стили для секций */
+.home-section,
+.about-section,
+.resume-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(0 0 0), #3d3d3d);
+    box-sizing: border-box;
+}
+
+/* Стили для Home */
+.home-section {
+    background-image: url("2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-block: 150px 25px;
+}
+
+.header-content {
+    margin-bottom: 50px;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px #000;
+}
+
+.header-content h1 span {
+    font-weight: 800;
+}
+
+.header-content p {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.header-content .buttons {
+    margin-top: 20px;
+}
+
+.header-content .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: #00000075; 
+}
+
+.header-content .buttons a:hover {
+    background-color: rgba(0, 160, 233, 0.2);
+    box-shadow: 0 0 10px rgba(0, 160, 233, 0.7);
+}
+
+.social-icons {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* About */
+.about-section {
+    /*background-image: url("tegar-rynaldi-4FfBFTuKkFA-unsplash.jpg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 50px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    padding: 50px 50px 0 50px;
+    box-sizing: border-box;
+    gap: 150px;
+    box-shadow: rgba(0, 160, 233, 0.7) 0px 10px 36px 0px, rgba(0, 160, 233, 0.7) 0px 0px 0px 1px;
+}
+
+.about-text {
+    width: 60%;
+    max-width: 550px;
+    padding-bottom: 50px;
+}
+
+.about-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.about-text h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: auto;
+    min-width: 170px;
+    height: 3px;
+    background-color: #005f8a;
+}
+
+.underline {
+    display: none;
+}
+
+.email {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-location {
+    position: relative;
+    display: inline-block;
+    padding: 1px 35px;
+    text-align: left;
+    max-width: 1200px;
+}
+
+.about-location::after,
+.about-location::before { position: absolute; top: 50%; transform: translateY(-50%);  content: ''; display: inline-block; height: 3px; width: 25px; background-color:  #005f8a;}
+.about-location::after {right: 0;}
+.about-location::before {left: 0;}
+/* resume */
+.resume-section {
+    background: linear-gradient(to bottom, rgb(0 0 0), #5a5a5a);
+}
+
+.resume-section li {
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.resume-section h2 {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.resume-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: auto;
+    min-width: 170px;
+    height: 3px;
+    background-color: #005f8a;
+}
+
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 50px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.skills,
+.experience,
+.interests {
+    padding: 20px;
+}
+
+.skills h2,
+.experience h2,
+.interests h2 {
+    margin-bottom: 10px;
+}
+
+.skills {
+    border-right: 1px solid #efefef29;
+}
+
+.skills h2 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.skills h2:not(:first-child) {
+    margin-top: 50px;
+}
+
+.experience article {
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 25px;
+}
+
+
+
+.accordion-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.accordion-item {
+    border-bottom: 1px solid #dddddd38;
+}
+.accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.accordion-header {
+    position: relative; /* Для позиционирования стрелки */
+    padding-right: 30px; /* Отступ для стрелки */
+}
+
+.arrow {
+    position: absolute;
+    right: 5px;
+    border: solid #fff;
+    opacity: 0.6;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(225deg); /* Поворот стрелки при открытии */
+}
+
+.accordion-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.accordion-item.active .accordion-content {
+    padding: 15px;
+}
+/*  Education */
+.education {
+    padding: 20px;
+}
+
+.education h2 {
+    margin-bottom: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.university-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.education-details h3 {
+    margin-bottom: 5px;
+}
+
+.education-details p {
+    margin: 0;
+}
+
+.education-item i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+.kurs-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.kurso-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
