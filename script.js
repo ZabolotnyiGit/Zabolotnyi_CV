@@ -1,13 +1,3 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TKLMJSN7ZQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TKLMJSN7ZQ');
-</script>
-
-<script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -42,4 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-</script>
