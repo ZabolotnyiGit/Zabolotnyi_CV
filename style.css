@@ -1,407 +1,416 @@
-/* --- Global Styles --- */
 html {
     scroll-behavior: smooth;
+    background: linear-gradient(to bottom, rgb(0 0 0), #3d3d3d);
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Основной текст читабельнее */
+    font-family: sans-serif;
     color: #f0f0f0;
     margin: 0;
     min-height: 100vh;
-    background-color: #121212; /* Глубокий черный фон */
-    line-height: 1.6;
+    position: relative;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif; /* Заголовки выглядят премиально */
-    margin-top: 0;
-}
+a { text-decoration: none; color: #fff;}
 
-a { 
-    text-decoration: none; 
-    color: #fff;
-    transition: all 0.3s ease;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-/* --- Navigation --- */
 nav {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-    padding: 20px 40px;
+    background-color: transparent;
+    border-bottom: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Фиксируем меню при скролле */
+    padding: 20px;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
 }
 
 nav li {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 nav a {
-    font-weight: 500;
-    font-size: 1.1rem;
-    position: relative;
+    color: #ffffff;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #00aaff;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
+nav a:hover {
+    background-color: rgba(0, 160, 233, 0.2);
+    box-shadow: 0 0 10px rgba(0, 160, 233, 0.7);
 }
 
 .phone {
-    font-weight: 600;
-    color: #00aaff !important; /* Акцентный цвет для контакта */
+    font-size: 15px;
 }
 
-/* --- Sections Common --- */
+/* Стили для секций */
 .home-section,
 .about-section,
 .resume-section {
     min-height: 100vh;
-    padding: 80px 20px; /* Больше воздуха */
-    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #0f0f0f 0%, #2a2a2a 100%);
+    background: linear-gradient(to bottom, rgb(0 0 0), #3d3d3d);
+    box-sizing: border-box;
 }
 
-/* --- Home Section --- */
+/* Стили для Home */
 .home-section {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("2.jpg");
+    background-image: url("2.jpg");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: left;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    padding-left: 10%; /* Смещение контента влево */
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-block: 150px 25px;
+}
+
+.header-content {
+    margin-bottom: 50px;
 }
 
 .header-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 15px;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px #000;
 }
 
 .header-content h1 span {
-    color: #00aaff; /* Акцент на фамилии */
+    font-weight: 800;
 }
 
 .header-content p {
-    font-size: 1.5rem;
+    font-size: 35px;
     font-weight: 300;
-    margin-bottom: 30px;
-    color: #cccccc;
 }
 
-.buttons {
-    display: flex;
-    gap: 15px;
+.header-content .buttons {
+    margin-top: 20px;
 }
 
-.btn-primary, .btn-secondary {
-    padding: 12px 30px;
+.header-content .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
     border-radius: 5px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: #00000075; 
 }
 
-.btn-primary {
-    background-color: #00aaff;
-    border: 2px solid #00aaff;
-    color: #000;
-}
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: #00aaff;
-}
-
-.btn-secondary {
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-.btn-secondary:hover {
-    background-color: #fff;
-    color: #000;
+.header-content .buttons a:hover {
+    background-color: rgba(0, 160, 233, 0.2);
+    box-shadow: 0 0 10px rgba(0, 160, 233, 0.7);
 }
 
 .social-icons {
-    margin-top: 50px;
+    margin-top: auto;
+    margin-bottom: 20px;
 }
 
 .social-icons a {
-    font-size: 1.8rem;
-    margin-right: 20px;
-    opacity: 0.8;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 20px;
 }
 
-.social-icons a:hover {
-    opacity: 1;
-    color: #00aaff;
-    transform: translateY(-3px);
+/* About */
+.about-section {
+    /*background-image: url("tegar-rynaldi-4FfBFTuKkFA-unsplash.jpg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 50px;
 }
 
-/* --- About Section --- */
 .about-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+    align-items: end;
     width: 100%;
-    gap: 60px;
-    margin-bottom: 30px;
+    padding: 50px 50px 0 50px;
+    box-sizing: border-box;
+    gap: 150px;
+    box-shadow: rgba(0, 160, 233, 0.7) 0px 10px 36px 0px, rgba(0, 160, 233, 0.7) 0px 0px 0px 1px;
 }
 
 .about-text {
-    flex: 1;
+    width: 60%;
+    max-width: 550px;
+    padding-bottom: 50px;
 }
 
 .about-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #00aaff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.about-text .email {
-    display: inline-block;
-    margin-bottom: 25px;
-    color: #aaaaaa;
+.about-text h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: auto;
+    min-width: 170px;
+    height: 3px;
+    background-color: #005f8a;
+}
+
+.underline {
+    display: none;
+}
+
+.email {
     font-style: italic;
-    border-bottom: 1px dashed #555;
+    margin-bottom: 30px;
 }
 
 .about-image {
-    flex: 0 0 350px; /* Фиксированная ширина для фото */
     position: relative;
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 20px 20px 0px rgba(0, 170, 255, 0.1); /* Стильная рамка */
+    height: auto;
+    display: block;
 }
 
-/* --- Resume Section --- */
-.resume-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Левая колонка уже, правая шире */
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.skills h2, .experience h2, .education h2 {
-    font-size: 1.4rem;
-    color: #00aaff;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.skills li {
-    margin-bottom: 10px;
-    padding-left: 20px;
+.about-location {
     position: relative;
+    display: inline-block;
+    padding: 1px 35px;
+    text-align: left;
+    max-width: 1200px;
 }
 
-.skills li::before {
-    content: '▹';
+.about-location::after,
+.about-location::before { position: absolute; top: 50%; transform: translateY(-50%);  content: ''; display: inline-block; height: 3px; width: 25px; background-color:  #005f8a;}
+.about-location::after {right: 0;}
+.about-location::before {left: 0;}
+/* resume */
+.resume-section {
+    background: linear-gradient(to bottom, rgb(0 0 0), #5a5a5a);
+}
+
+.resume-section li {
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.resume-section h2 {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.resume-section h2::after {
+    content: "";
     position: absolute;
     left: 0;
-    color: #00aaff;
+    bottom: -5px;
+    width: auto;
+    min-width: 170px;
+    height: 3px;
+    background-color: #005f8a;
 }
 
-/* Accordion Styling */
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 50px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.skills,
+.experience,
+.interests {
+    padding: 20px;
+}
+
+.skills h2,
+.experience h2,
+.interests h2 {
+    margin-bottom: 10px;
+}
+
+.skills {
+    border-right: 1px solid #efefef29;
+}
+
+.skills h2 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.skills h2:not(:first-child) {
+    margin-top: 50px;
+}
+
+.experience article {
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 25px;
+}
+
+
+
 .accordion-container {
     width: 100%;
-    border-radius: 8px;
-}
-
-.accordion-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 15px;
+    max-width: 600px;
+    margin: 20px auto;
     border-radius: 5px;
     overflow: hidden;
 }
-
+.accordion-item {
+    border-bottom: 1px solid #dddddd38;
+}
 .accordion-header {
-    padding: 20px;
+    padding: 15px;
     cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.accordion-header:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #00aaff;
+.accordion-header {
+    position: relative; /* Для позиционирования стрелки */
+    padding-right: 30px; /* Отступ для стрелки */
 }
 
 .arrow {
+    position: absolute;
+    right: 5px;
     border: solid #fff;
+    opacity: 0.6;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 4px;
+    padding: 5px;
     transform: rotate(45deg);
-    transition: transform 0.3s;
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow:hover {
+    opacity: 1;
 }
 
 .accordion-item.active .arrow {
-    transform: rotate(-135deg);
-    border-color: #00aaff;
+    transform: rotate(225deg); /* Поворот стрелки при открытии */
+}
+
+.accordion-item:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 20px;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
-
 .accordion-item.active .accordion-content {
-    padding-bottom: 20px;
+    padding: 15px;
+}
+/*  Education */
+.education {
+    padding: 20px;
 }
 
-/* --- ВАШ ЗАПРОС: Tech Stack Styling --- */
-.tech-stack-container {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+.education h2 {
+    margin-bottom: 20px;
 }
 
-.tech-label {
-    color: #ffffff !important;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.tech-list-inline {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px; /* Чуть увеличил отступ для читаемости */
-}
-
-.tech-list-inline li {
-    color: #e0e0e0;
-    font-size: 0.95rem;
-}
-
-/* --- Education --- */
 .education-item {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-
-.education-logo-wrapper {
-    min-width: 50px;
-    margin-right: 20px;
-    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .university-logo {
     width: 50px;
-    height: auto;
-}
-
-.education-icon {
-    font-size: 30px;
-    color: #555;
+    height: 50px;
+    margin-right: 20px;
 }
 
 .education-details h3 {
-    font-size: 1.1rem;
     margin-bottom: 5px;
-    color: #fff;
 }
 
 .education-details p {
     margin: 0;
-    font-size: 0.9rem;
-    color: #aaa;
 }
 
-.education-details .year {
-    color: #00aaff;
-    font-size: 0.85rem;
-    margin-top: 5px;
+.education-item i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+.kurs-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.kurso-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 }
 
-/* --- Mobile Responsiveness --- */
-@media screen and (max-width: 768px) {
-    nav {
-        padding: 15px 20px;
-        background: #000;
+@media screen and (max-width: 800px) {
+    .resume-content {
+        grid-template-columns: 1fr; padding: 30px;
     }
-    
-    .home-section {
-        padding-left: 20px;
-        align-items: center;
-        text-align: center;
+    .skills { 
+        border-right: 0;
     }
-
-    .header-content h1 {
-        font-size: 2.8rem;
-    }
-    
-    .about-content {
+    .skills, .experience, .interests {  
+        padding: 0;
+     }
+     nav {
         flex-direction: column;
     }
-    
-    .about-image {
-        order: -1; /* Фото сверху */
-        flex: 0 0 auto;
-        width: 200px;
+    .phone {
+        order: -1;
     }
-    
-    .resume-content {
-        grid-template-columns: 1fr;
+    .header-content h1 { 
+        font-size: 50px;
     }
-    
-    .buttons {
-        justify-content: center;
+    .header-content p { 
+        font-size: 30px;
+    }
+    .about-section { 
+        padding: 20px 20px 0 20px;
+    }
+    .about-content {    
+        flex-direction: column; gap: 20px; padding: 15px;
+    }
+    .about-text { 
+        width: 100%; padding-bottom: 0;
     }
 }
